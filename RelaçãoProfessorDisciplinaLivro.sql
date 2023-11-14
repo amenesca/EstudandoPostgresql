@@ -19,7 +19,7 @@ create table livro(
 	nome varchar(15) not null,
 	autor varchar(40) not null,
 	sinopse varchar(500),
+	id_disciplina integer not null,
 	primary key (id_livro),
-	foreign key (id_disciplina)
-	references disciplinas(id_disciplina)
+	foreign key (id_disciplina) references disciplinas(id_disciplina)
 )
