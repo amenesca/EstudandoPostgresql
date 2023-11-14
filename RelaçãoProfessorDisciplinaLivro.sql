@@ -32,3 +32,16 @@ update disciplinas set nome = 'biologia2'
 where id_disciplina = 8;
 
 delete from disciplinas where id_disciplina = 9;
+
+alem de criar permissoes para visualização das tabelas, precisamos criar views que sao mascaras que permitem
+vermos os dados certos
+como criar visualizações para manter os dados sigilosos seguros:
+
+create view matricula_com_sigilo
+(
+	select
+		id_aluno,
+		id_matricula,
+		validade
+	from matriculas
+),
